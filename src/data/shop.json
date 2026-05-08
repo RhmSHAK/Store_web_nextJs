@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "title": "Wireless Bluetooth Headphones",
+    "image": "https://source.unsplash.com/600x400/?bluetooth-headphones",
+    "full_description": "High-quality wireless headphones with noise cancellation and long battery life. Ideal for music lovers and professionals.",
+    "key_information": {
+      "brand": "SoundMax",
+      "battery_life": "30 hours",
+      "connectivity": "Bluetooth 5.2",
+      "noise_cancellation": true
+    },
+    "related_items": ["Wireless Earbuds", "Headphone Case", "Audio Cable"],
+    "additional_info": {
+      "price": "$120",
+      "date": "2026-01-15",
+      "category": "Electronics"
+    }
+  },
+  {
+    "id": 2,
+    "title": "Smart Fitness Watch",
+    "image": "https://source.unsplash.com/600x400/?smartwatch,fitness",
+    "full_description": "Track your daily activities, heart rate, and sleep patterns with this stylish smart fitness watch.",
+    "key_information": {
+      "brand": "FitPulse",
+      "battery": "7 days",
+      "water_resistant": true,
+      "features": ["Heart Rate Monitor", "Step Counter", "Sleep Tracking"]
+    },
+    "related_items": ["Fitness Band", "Smartphone App"],
+    "additional_info": {
+      "price": "$80",
+      "date": "2026-02-10",
+      "category": "Wearables"
+    }
+  },
+  {
+    "id": 3,
+    "title": "Gaming Laptop",
+    "image": "https://source.unsplash.com/600x400/?gaming-laptop",
+    "full_description": "Powerful gaming laptop with high-end graphics and fast processing speed for smooth gameplay.",
+    "key_information": {
+      "brand": "GamePro",
+      "processor": "Intel i7",
+      "ram": "16GB",
+      "gpu": "RTX 4060"
+    },
+    "related_items": ["Gaming Mouse", "Laptop Cooling Pad"],
+    "additional_info": {
+      "price": "$1500",
+      "date": "2026-03-05",
+      "category": "Computers"
+    }
+  },
+  {
+    "id": 4,
+    "title": "Digital Camera",
+    "image": "https://source.unsplash.com/600x400/?dslr-camera",
+    "full_description": "Capture stunning photos with this high-resolution digital camera featuring advanced lens technology.",
+    "key_information": {
+      "brand": "PhotoSnap",
+      "resolution": "24MP",
+      "zoom": "10x Optical",
+      "video": "4K"
+    },
+    "related_items": ["Tripod", "Camera Bag"],
+    "additional_info": {
+      "price": "$500",
+      "date": "2026-01-25",
+      "category": "Photography"
+    }
+  },
+  {
+    "id": 5,
+    "title": "Smartphone",
+    "image": "https://source.unsplash.com/600x400/?smartphone",
+    "full_description": "Latest smartphone with powerful processor, stunning display, and long-lasting battery.",
+    "key_information": {
+      "brand": "TechOne",
+      "display": "6.7 inch OLED",
+      "battery": "5000mAh",
+      "camera": "108MP"
+    },
+    "related_items": ["Phone Case", "Screen Protector"],
+    "additional_info": {
+      "price": "$999",
+      "date": "2026-04-01",
+      "category": "Mobile"
+    }
+  },
+  {
+    "id": 6,
+    "title": "Electric Kettle",
+    "image": "https://source.unsplash.com/600x400/?electric-kettle",
+    "full_description": "Fast boiling electric kettle with auto shut-off and modern design.",
+    "key_information": {
+      "brand": "HomeEase",
+      "capacity": "1.5L",
+      "power": "1500W",
+      "material": "Stainless Steel"
+    },
+    "related_items": ["Tea Maker", "Coffee Mug"],
+    "additional_info": {
+      "price": "$35",
+      "date": "2026-02-20",
+      "category": "Home Appliances"
+    }
+  },
+  {
+    "id": 7,
+    "title": "Office Chair",
+    "image": "https://source.unsplash.com/600x400/?office-chair",
+    "full_description": "Ergonomic office chair designed for comfort and support during long working hours.",
+    "key_information": {
+      "brand": "ComfortSeat",
+      "material": "Mesh",
+      "adjustable": true,
+      "weight_capacity": "120kg"
+    },
+    "related_items": ["Office Desk", "Foot Rest"],
+    "additional_info": {
+      "price": "$150",
+      "date": "2026-03-18",
+      "category": "Furniture"
+    }
+  },
+  {
+    "id": 8,
+    "title": "Backpack",
+    "image": "https://source.unsplash.com/600x400/?backpack",
+    "full_description": "Durable and stylish backpack suitable for travel, school, and daily use.",
+    "key_information": {
+      "brand": "TravelPro",
+      "capacity": "25L",
+      "waterproof": true,
+      "compartments": 5
+    },
+    "related_items": ["Laptop Sleeve", "Travel Organizer"],
+    "additional_info": {
+      "price": "$45",
+      "date": "2026-01-30",
+      "category": "Accessories"
+    }
+  },
+  {
+    "id": 9,
+    "title": "Running Shoes",
+    "image": "https://source.unsplash.com/600x400/?running-shoes",
+    "full_description": "Lightweight running shoes with breathable material and superior grip.",
+    "key_information": {
+      "brand": "RunFast",
+      "size_range": "6-12",
+      "material": "Mesh",
+      "sole": "Rubber"
+    },
+    "related_items": ["Sports Socks", "Fitness Tracker"],
+    "additional_info": {
+      "price": "$70",
+      "date": "2026-02-14",
+      "category": "Sportswear"
+    }
+  },
+  {
+    "id": 10,
+    "title": "LED Desk Lamp",
+    "image": "https://source.unsplash.com/600x400/?desk-lamp",
+    "full_description": "Energy-efficient LED desk lamp with adjustable brightness and modern design.",
+    "key_information": {
+      "brand": "BrightLite",
+      "power": "10W",
+      "brightness_levels": 5,
+      "color_modes": 3
+    },
+    "related_items": ["Study Table", "Extension Cord"],
+    "additional_info": {
+      "price": "$25",
+      "date": "2026-03-12",
+      "category": "Lighting"
+    }
+  }
+]
