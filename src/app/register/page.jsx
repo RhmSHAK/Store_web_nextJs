@@ -1,7 +1,3 @@
-// ============================
-// app/register/page.jsx
-// ============================
-
 "use client";
 
 import Link from "next/link";
@@ -14,11 +10,11 @@ import {
 } from "react-icons/fi";
 import { postUser } from "@/actions/server/auth";
 import { useRouter } from "next/navigation";
+import Swal from "sweetalert2";
 
 const RegisterPage = () => {
   const router = useRouter();
 
-  // ================= REGISTER =================
   const handleRegister = async (e) => {
     e.preventDefault();
 
@@ -36,7 +32,12 @@ const RegisterPage = () => {
     const result  = await postUser(userData);
     //alert(result.message);
     if(result.acknowledged){
-      alert("User created successfully. Please login now.");
+      //alert("User created successfully. Please login now.");
+      Swal.fire({
+        icon: "success",
+        title: "Registration Successful",
+        text: "Your account has been created. Please login now.",
+      });
       form.reset();
       router.push("/logIN");
     }

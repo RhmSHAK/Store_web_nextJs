@@ -1,6 +1,3 @@
-// ============================
-// app/login/page.jsx
-// ============================
 
 "use client";
 
@@ -19,7 +16,7 @@ function LoginContent() {
   const params = useSearchParams();
   const router = useRouter();
 
-  // ================= LOGIN =================
+
   const handleLogin = async (e) => {
     e.preventDefault();
 
@@ -50,7 +47,7 @@ function LoginContent() {
         text: "You have logged in successfully",
       });
 
-      router.push(result.url || "/");
+      router.push("/");
     }
   };
 
