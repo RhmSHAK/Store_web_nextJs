@@ -5,18 +5,18 @@
 "use client";
 
 import Link from "next/link";
+import { Suspense } from "react";
 import { motion } from "framer-motion";
 import { FiMail, FiLock } from "react-icons/fi";
 
-import { signIn } from "next-auth/react"
+import { signIn } from "next-auth/react";
 import Swal from "sweetalert2";
 import { useRouter, useSearchParams } from "next/navigation";
+
 import SocialButton from "@/components/buttons/SocialButton";
 
-
-const LoginPage = () => {
-  const params =  useSearchParams();
-
+function LoginContent() {
+  const params = useSearchParams();
   const router = useRouter();
 
   // ================= LOGIN =================
@@ -30,34 +30,32 @@ const LoginPage = () => {
       password: form.password.value,
     };
 
-    console.log(userData);
-     
     const result = await signIn("credentials", {
-        email: userData.email,
-        password: userData.password,
-        redirect: false,
-        callbackUrl: params.get("callbackUrl") || "/",
+      email: userData.email,
+      password: userData.password,
+      redirect: false,
+      callbackUrl: params.get("callbackUrl") || "/",
     });
-    console.log(result)
-    if(!result.ok){
-        Swal.fire({
-            icon: 'error',
-            title: 'Login Failed',
-            text: "Invalid email or password",
-        });
-    }else{
-        Swal.fire({
-            icon: 'success',
-            title: 'Welcome to MyStore',
-            text: "You have logged in successfully",
-        });
-        // router.push("/");
+
+    if (!result.ok) {
+      Swal.fire({
+        icon: "error",
+        title: "Login Failed",
+        text: "Invalid email or password",
+      });
+    } else {
+      Swal.fire({
+        icon: "success",
+        title: "Welcome to MyStore",
+        text: "You have logged in successfully",
+      });
+
+      router.push(result.url || "/");
     }
   };
 
   return (
-    <div className="min-h-screen  flex items-center justify-center px-4 overflow-hidden">
-
+    <div className="min-h-screen flex items-center justify-center px-4 overflow-hidden">
       {/* Animated Background */}
       <motion.div
         animate={{
@@ -79,7 +77,6 @@ const LoginPage = () => {
         className="relative z-10 w-full max-w-md"
       >
         <div className="bg-gradient-to-r from-blue-300 to-blue-400 backdrop-blur-xl bg-white/20 border border-white/30 rounded-3xl shadow-2xl p-8">
-
           <h1 className="text-4xl font-bold text-center text-white mb-2">
             Welcome Back
           </h1>
@@ -89,11 +86,7 @@ const LoginPage = () => {
           </p>
 
           {/* FORM */}
-          <form
-            onSubmit={handleLogin}
-            className="space-y-5"
-          >
-
+          <form onSubmit={handleLogin} className="space-y-5">
             {/* Email */}
             <div>
               <label className="text-white text-sm mb-2 block">
@@ -138,27 +131,27 @@ const LoginPage = () => {
             >
               Login
             </motion.button>
-
-            
           </form>
 
-         <SocialButton></SocialButton>
+          <SocialButton />
 
           {/* Register Link */}
           <p className="text-center text-white mt-6">
             Don't have an account?{" "}
-            <Link
-              href="/register"
-              className="font-bold underline"
-            >
+            <Link href="/register" className="font-bold underline">
               Register
             </Link>
           </p>
         </div>
       </motion.div>
-       
     </div>
   );
-};
+}
 
-export default LoginPage;
+export default function LoginPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <LoginContent />
+    </Suspense>
+  );
+}
